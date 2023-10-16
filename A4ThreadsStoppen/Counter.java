@@ -1,43 +1,63 @@
 package A4ThreadsStoppen;
 
-import java.util.Scanner;
+ 
 
 public class Counter implements Runnable {
-    private static final int COUNT_LIMIT = 100;
-    private static volatile boolean shouldRun = true;
-    private int counter = 1;
+
+ 
+
+    // Objektvariablen
+
+    int wait;
+
+    Thread t;
+private static volatile boolean shouldRun = true;
+ 
+
+    public Counter(int wait) {
+
+        this.wait = wait;
+
+        t = new Thread(this);
+
+    }
+
+ 
+
+    // run-Methode ueberschreiben
 
     @Override
-    public void run() {
-       System.out.println("Thread startet");
-        while (shouldRun = true) {
 
-            System.out.println("Current Count" + getCount());
-            ;
+    public void run() {
+
+        System.out.flush();
+
+        System.out.print("Ich arbeite");
+
+        for (int i = 0; i <= 100; i++) {
+
+            System.out.print(".");
 
             try {
-                Thread.sleep(100);
+
+                Thread.sleep(wait);
+
             } catch (InterruptedException e) {
-                shouldRun = false;
+
+                e.printStackTrace();
+
             }
 
         }
 
     }
 
-    public int getCount() {
-        return counter++;
-    }
+ 
 
-    public static void main(String[] args) throws InterruptedException {
-        new Thread(() -> new Counter()).start();
+    public void start() {
 
-        Scanner scanner = new Scanner(System.in);
+        t.start();
 
-        while (scanner.nextLine().toLowerCase().startsWith("q")) {
-            shouldRun = false;
-
-        }
     }
 
 }
