@@ -11,10 +11,7 @@ public class Counter implements Runnable {
     int wait;
 
     Thread t;
-private static volatile boolean shouldRun = true;
- 
-
-    public Counter(int wait) {
+public Counter(int wait) {
 
         this.wait = wait;
 
