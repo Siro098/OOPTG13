@@ -39,7 +39,7 @@ public class MainCounter {
        
 
         System.out.println("MyThread zuende");
-
+        scanner.close();
  
 
        
