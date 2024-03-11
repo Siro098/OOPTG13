@@ -60,7 +60,7 @@ public class ChatServer {
     }
 
     public void removeClient(ClientHandler client) {
-    clients.remove(client);
+        clients.remove(client);
     }
 
 }
