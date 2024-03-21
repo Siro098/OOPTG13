@@ -24,9 +24,5 @@ students.forEach(swem);
 
 public static void soutWithEm(String s){
 
-
-
 }
-
-
 }
