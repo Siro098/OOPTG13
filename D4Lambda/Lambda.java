@@ -9,6 +9,11 @@ public static void main(String[] args) {
  Mathe subtraktion = (int a, int b) -> a - b;
  Mathe division = (int a, int b) -> a / b;
 
+System.out.println(addittion);
+System.out.println(multiplikation);
+System.out.println(subtraktion);
+System.out.println(division);
+
 }
 
 

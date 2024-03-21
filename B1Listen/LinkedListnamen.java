@@ -11,7 +11,7 @@ public class LinkedListnamen {
         System.out.flush();;
         //Liste erstellen
 
-LinkedList<String> Einkaufsliste = new LinkedList();
+LinkedList<String> Einkaufsliste = new LinkedList<String>();
 
 Einkaufsliste.add("Äpfel");
 Einkaufsliste.add("Paulaner Spezi");

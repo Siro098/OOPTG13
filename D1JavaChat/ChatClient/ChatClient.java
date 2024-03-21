@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.Socket;
-import java.net.UnknownHostException;
+
 
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
@@ -92,7 +92,7 @@ public class ChatClient extends JFrame implements KeyListener {
                 try {
                     connectionToServer.close();
                 } catch (IOException e) {
-                    // TODO Auto-generated catch block
+                    
                     e.printStackTrace();
                 }   
             }
@@ -101,7 +101,7 @@ public class ChatClient extends JFrame implements KeyListener {
                 try {
                     fromServerReader.close();
                 } catch (IOException e) {
-                    // TODO Auto-generated catch block
+                    
                     e.printStackTrace();
                 }   
             }
